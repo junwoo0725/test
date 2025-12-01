@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>키오스크 간편 주문 프로토타입</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="kiosk-app">
+
+        <header id="app-header">
+            <h1>간편 주문 키오스크</h1>
+            <p>메뉴를 선택해주세요.</p>
+        </header>
+
+        <nav id="category-nav">
+            <button class="category-btn active" data-category="all">☕ 전체</button>
+            <button class="category-btn" data-category="coffee">🥤 커피</button>
+            <button class="category-btn" data-category="beverage">🍹 음료</button>
+            <button class="category-btn" data-category="dessert">🍰 디저트</button>
+        </nav>
+
+        <main id="menu-list-container">
+            <div class="menu-item" data-id="1" data-price="4000" data-category="coffee">
+                <div class="menu-image">
+
+[Image of a hot coffee mug]
+</div>
+                <div class="menu-info">
+                    <p class="menu-name">따뜻한 아메리카노</p>
+                    <p class="menu-price">4,000원</p>
+                </div>
+                <button class="add-to-cart-btn">담기</button>
+            </div>
+            
+            <div class="menu-item" data-id="2" data-price="4500" data-category="coffee">
+                <div class="menu-image">
+
+[Image of an iced latte in a glass]
+</div>
+                <div class="menu-info">
+                    <p class="menu-name">시원한 카페 라떼</p>
+                    <p class="menu-price">4,500원</p>
+                </div>
+                <button class="add-to-cart-btn">담기</button>
+            </div>
+
+            <div class="menu-item" data-id="3" data-price="5500" data-category="beverage">
+                <div class="menu-image">
+
+[Image of a blue lemonade beverage]
+</div>
+                <div class="menu-info">
+                    <p class="menu-name">블루 레몬 에이드</p>
+                    <p class="menu-price">5,500원</p>
+                </div>
+                <button class="add-to-cart-btn">담기</button>
+            </div>
+
+            <div class="menu-item" data-id="4" data-price="5000" data-category="dessert">
+                <div class="menu-image"></div>
+                <div class="menu-info">
+                    <p class="menu-name">플레인 스콘</p>
+                    <p class="menu-price">5,000원</p>
+                </div>
+                <button class="add-to-cart-btn">담기</button>
+            </div>
+            
+            <div class="menu-item" data-id="5" data-price="4500" data-category="coffee">
+                <div class="menu-image">
+
+[Image of a mug of hot cappuccino]
+</div>
+                <div class="menu-info">
+                    <p class="menu-name">카푸치노</p>
+                    <p class="menu-price">4,500원</p>
+                </div>
+                <button class="add-to-cart-btn">담기</button>
+            </div>
+            
+        </main>
+
+        <footer id="cart-summary-bar">
+            <div id="cart-info">
+                <span id="item-count">0</span>개 선택됨
+                <span class="separator">|</span>
+                총액: <span id="total-price">0</span>원
+            </div>
+            <button id="next-step-btn" disabled>장바구니 확인 (다음)</button>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
